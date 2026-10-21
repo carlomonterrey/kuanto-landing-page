@@ -258,11 +258,14 @@ section[id] {
   display: block;
 }
 .brand__name {
-  font-family: var(--font-display);
-  font-size: 23px;
+  font-family: var(--font-brand);
+  font-weight: 500;
+  font-size: 28px;
   line-height: 1;
-  letter-spacing: 0.02em;
-  text-transform: lowercase;
+  letter-spacing: -0.015em;
+}
+.brand__dot {
+  color: var(--ember);
 }
 
 .nav__sep {
@@ -1342,12 +1345,12 @@ section[id] {
   border-radius: 12px;
 }
 .footer__name {
-  font-family: var(--font-display);
-  font-size: 26px;
+  font-family: var(--font-brand);
+  font-weight: 500;
+  font-size: 30px;
   line-height: 1;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.015em;
   color: var(--chalk);
-  text-transform: lowercase;
 }
 .footer__tag {
   margin-top: 8px;

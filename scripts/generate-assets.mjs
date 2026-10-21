@@ -15,15 +15,20 @@ const out = join(root, 'public');
 const logo = await readFile(join(root, 'src/assets/img/logo.svg'), 'utf8');
 const logoUri = `data:image/svg+xml;base64,${Buffer.from(logo).toString('base64')}`;
 
+const appIcon = await readFile(join(root, 'src/assets/img/app-icon.svg'), 'utf8');
+const appIconUri = `data:image/svg+xml;base64,${Buffer.from(appIcon).toString('base64')}`;
+
 const halftone = await readFile(join(root, 'src/assets/img/halftone-violet.svg'), 'utf8');
 const halftoneUri = `data:image/svg+xml;base64,${Buffer.from(halftone).toString('base64')}`;
 
 const anton = await readFile(join(root, 'src/assets/fonts/anton-latin.woff2'));
 const dmSans = await readFile(join(root, 'src/assets/fonts/dm-sans-latin.woff2'));
+const fraunces = await readFile(join(root, 'src/assets/fonts/fraunces-latin.woff2'));
 
 const fonts = `
 @font-face { font-family: 'Anton'; src: url(data:font/woff2;base64,${anton.toString('base64')}) format('woff2'); font-weight: 400; }
 @font-face { font-family: 'DM Sans'; src: url(data:font/woff2;base64,${dmSans.toString('base64')}) format('woff2'); font-weight: 100 900; }
+@font-face { font-family: 'Fraunces'; src: url(data:font/woff2;base64,${fraunces.toString('base64')}) format('woff2'); font-weight: 300 700; }
 `;
 
 await mkdir(join(out, 'icons'), { recursive: true });
@@ -41,17 +46,16 @@ async function shot(html, width, height, path, { transparent = false } = {}) {
   console.log('·', path);
 }
 
-const icon = (size, padding = 0, background = 'transparent') => `
+const icon = (size) => `
   <!doctype html><html><head><style>
-    html,body{margin:0;width:${size}px;height:${size}px;background:${background};}
-    .wrap{width:100%;height:100%;display:grid;place-items:center;}
-    img{width:${Math.round(size * (1 - padding * 2))}px;height:${Math.round(size * (1 - padding * 2))}px;display:block;}
-  </style></head><body><div class="wrap"><img src="${logoUri}"></div></body></html>`;
+    html,body{margin:0;width:${size}px;height:${size}px;background:#070607;}
+    img{width:${size}px;height:${size}px;display:block;}
+  </style></head><body><img src="${appIconUri}"></body></html>`;
 
-await shot(icon(512, 0.08), 512, 512, 'icons/icon-512.png', { transparent: true });
-await shot(icon(192, 0.08), 192, 192, 'icons/icon-192.png', { transparent: true });
-await shot(icon(180, 0.08, '#f7f6f2'), 180, 180, 'icons/apple-touch-icon.png');
-await shot(icon(512, 0.22, '#20123a'), 512, 512, 'icons/maskable-512.png');
+await shot(icon(512), 512, 512, 'icons/icon-512.png');
+await shot(icon(192), 192, 192, 'icons/icon-192.png');
+await shot(icon(180), 180, 180, 'icons/apple-touch-icon.png');
+await shot(icon(512), 512, 512, 'icons/maskable-512.png');
 
 const og = `<!doctype html><html><head><style>
   ${fonts}
@@ -61,8 +65,9 @@ const og = `<!doctype html><html><head><style>
   .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;height:100%;padding:56px 64px;gap:40px}
   .left{display:flex;flex-direction:column;justify-content:space-between}
   .brand{display:flex;align-items:center;gap:14px}
-  .brand img{width:44px;height:44px;border-radius:12px}
-  .brand span{font-family:'Anton';font-size:30px;letter-spacing:.02em}
+  .brand img{width:44px;height:44px;border-radius:10px}
+  .brand span{font-family:'Fraunces';font-weight:500;font-size:32px;letter-spacing:-.015em}
+  .brand .dot{color:#fc5000}
   h1{font-family:'Anton';font-weight:400;font-size:104px;line-height:.88;letter-spacing:.004em}
   p{font-size:22px;line-height:1.4;color:#33302f;max-width:520px}
   .url{font-weight:700;font-size:18px;letter-spacing:.02em;color:#33302f}
@@ -72,7 +77,7 @@ const og = `<!doctype html><html><head><style>
 </style></head><body>
   <div class="wrap">
     <div class="left">
-      <div class="brand"><img src="${logoUri}"><span>kuanto</span></div>
+      <div class="brand"><img src="${logoUri}"><span>kuanto<span class="dot">.</span></span></div>
       <h1>Sin internet,<br>el negocio<br>sigue.</h1>
       <div>
         <p>Punto de venta y almacén offline para negocios locales en Cuba. CUP y USD, tasa propia e historial de precios.</p>

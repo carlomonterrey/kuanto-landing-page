@@ -7,7 +7,7 @@ export function Nav() {
       <nav className="nav" aria-label="Principal">
         <a className="brand" href="#inicio" aria-label="Kuanto, ir al inicio">
           <img src={logo} alt="" width={34} height={34} />
-          <span className="brand__name">kuanto</span>
+          <span className="brand__name">kuanto<span className="brand__dot">.</span></span>
         </a>
         <span className="nav__sep" aria-hidden="true" />
         <div className="nav__links">

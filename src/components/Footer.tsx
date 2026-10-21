@@ -8,7 +8,7 @@ export function Footer() {
         <div className="footer__brand">
           <img src={logoLight} alt="" width={44} height={44} />
           <div>
-            <p className="footer__name">kuanto</p>
+            <p className="footer__name">kuanto<span className="brand__dot">.</span></p>
             <p className="footer__tag">{footer.tagline}</p>
           </div>
         </div>
