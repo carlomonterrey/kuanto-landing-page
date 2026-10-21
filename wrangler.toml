@@ -1,0 +1,6 @@
+# Cloudflare Pages: nombre del proyecto y salida del build.
+# La integración con GitHub se configura en el panel de Cloudflare
+# (Workers & Pages → Create → Pages → Connect to Git).
+name = "kuanto-landing-page"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-10-01"

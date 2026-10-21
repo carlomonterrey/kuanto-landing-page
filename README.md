@@ -55,6 +55,49 @@ no hace falta fallback de SPA.
 
 En Vercel u otro host, replica esas cabeceras en su configuración.
 
+### Cloudflare Pages con integración continua
+
+El repo ya está preparado (`wrangler.toml`, `.node-version`, `_headers`). Solo
+falta conectar el repositorio desde el panel de Cloudflare:
+
+1. **Workers & Pages → Create → Pages → Connect to Git**.
+2. Autoriza la Cloudflare GitHub App y elige
+   `carlomonterrey/kuanto-landing-page`.
+3. Configura el build:
+
+| Ajuste | Valor |
+|---|---|
+| Production branch | `main` |
+| Framework preset | None |
+| Build command | `npm run build` |
+| Build output directory | `dist` |
+| Root directory | `/` |
+| Environment variable | `NODE_VERSION=22` |
+
+4. **Save and Deploy**. Cada push a `main` reconstruye y publica; cada pull
+   request genera una *preview deployment* con su propia URL.
+
+El build incluye typecheck, Vite, SSR y prerender, así que Cloudflare recibe
+`dist/` ya con el HTML estático. `public/_headers` se aplica automáticamente
+(caché de assets, CSP y cabeceras de seguridad).
+
+**Dominio:** en el proyecto → *Custom domains* → añade `kuanto.app` (y
+`www.kuanto.app` redirigiendo al apex). Si el dominio está en Cloudflare, el DNS
+se crea solo; si no, apunta el CNAME al `*.pages.dev` del proyecto y activa el
+proxy.
+
+**CI en GitHub:** `.github/workflows/ci.yml` ejecuta `npm ci` y `npm run build`
+en cada push y pull request. Es un chequeo, no un segundo despliegue: el deploy
+lo hace la integración de Cloudflare. Evita añadir otro workflow que publique,
+porque duplicaría despliegues.
+
+**Subida directa (alternativa sin Git):**
+
+```bash
+npm run build
+npx wrangler pages deploy dist --project-name=kuanto-landing-page
+```
+
 ### Checklist de salida
 
 - DNS con HTTPS y redirección de `www` al dominio canónico.
