@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Tokens de Kuanto — cambia aquí colores, tipografía y formas.
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/anton-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../assets/fonts/dm-sans-latin.woff2') format('woff2');
+}
+
+:root {
+  /* Paleta (design.md · Caldera) */
+  --ember: #fc5000;
+  --ember-soft: #ff6a24;
+  --ember-ink: #d84300;
+  --plasma: #524ae9;
+  --sulfur: #f5f28e;
+  --limestone: #f7f6f2;
+  --pumice: #e2e2df;
+  --obsidian: #070607;
+  --ink: #070607;
+  --chalk: #ffffff;
+
+  /* Derivados */
+  --ink-soft: #33302f;
+  --muted: #565250;
+  --line: rgba(7, 6, 7, 0.22);
+  --line-strong: rgba(7, 6, 7, 0.42);
+  --line-light: rgba(255, 255, 255, 0.28);
+
+  /* Formas */
+  --r-card: 40px;
+  --r-media: 26px;
+  --r-pill: 800px;
+
+  /* Ritmo */
+  --wrap: 1280px;
+  --gutter: clamp(20px, 4vw, 48px);
+  --section: clamp(72px, 8vw, 112px);
+  --gap: clamp(20px, 3vw, 40px);
+
+  /* Tipografía */
+  --font-display: 'Anton', 'Arial Narrow', 'Haettenschweiler', sans-serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}

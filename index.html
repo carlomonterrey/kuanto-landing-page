@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kuanto — Punto de venta offline para Cuba</title>
+    <meta
+      name="description"
+      content="Punto de venta y almacén offline para negocios en Cuba: CUP y USD, tasa del dólar propia, historial de precios e inventario sin internet."
+    />
+    <link rel="canonical" href="https://kuanto.app/" />
+    <link rel="alternate" hreflang="es" href="https://kuanto.app/" />
+    <link rel="alternate" hreflang="x-default" href="https://kuanto.app/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="author" content="Kuanto" />
+    <meta name="application-name" content="Kuanto" />
+    <meta name="theme-color" content="#e2e2df" />
+    <meta name="color-scheme" content="light" />
+
+    <meta property="og:site_name" content="Kuanto" />
+    <meta property="og:locale" content="es_CU" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kuanto.app/" />
+    <meta property="og:title" content="Kuanto — Sin internet, el negocio sigue" />
+    <meta
+      property="og:description"
+      content="Punto de venta y almacén offline para negocios locales en Cuba. CUP y USD, tasa propia e historial de precios."
+    />
+    <meta property="og:image" content="https://kuanto.app/og/kuanto-og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Kuanto — Sin internet, el negocio sigue. Punto de venta offline para negocios en Cuba."
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kuanto — Sin internet, el negocio sigue" />
+    <meta
+      name="twitter:description"
+      content="Punto de venta y almacén offline para negocios locales en Cuba. CUP y USD, tasa propia e historial de precios."
+    />
+    <meta name="twitter:image" content="https://kuanto.app/og/kuanto-og.png" />
+
+    <link rel="icon" href="/src/assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <link
+      rel="preload"
+      href="/src/assets/fonts/anton-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/assets/fonts/dm-sans-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://kuanto.app/#organizacion",
+            "name": "Kuanto",
+            "url": "https://kuanto.app/",
+            "logo": "https://kuanto.app/icons/icon-512.png",
+            "description": "Punto de venta y gestión de almacenes offline para negocios locales en Cuba.",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+53 5523 0827",
+              "contactType": "ventas",
+              "availableLanguage": "es"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://kuanto.app/#sitio",
+            "url": "https://kuanto.app/",
+            "name": "Kuanto",
+            "inLanguage": "es",
+            "publisher": { "@id": "https://kuanto.app/#organizacion" }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Kuanto",
+            "applicationCategory": "BusinessApplication",
+            "applicationSubCategory": "Punto de venta y gestión de inventario",
+            "operatingSystem": "macOS, Windows, Android",
+            "inLanguage": "es",
+            "url": "https://kuanto.app/",
+            "description": "Punto de venta y almacén offline-first para la economía dual cubana: CUP y USD, tasa configurable, historial de precios, inventario, consignación y reportes, con los datos en el equipo del local.",
+            "featureList": [
+              "Caja y turnos con arqueo",
+              "Cobro en CUP y USD con tasa configurable",
+              "Inventario y existencias por local",
+              "Catálogo con márgenes e historial de precios",
+              "Consignación y liquidaciones",
+              "Compras, costos y reportes de utilidad",
+              "Sincronización por USB cifrada con AES-256",
+              "Licencia por máquina validada sin internet"
+            ],
+            "publisher": { "@id": "https://kuanto.app/#organizacion" }
+          }
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Kuanto funciona sin internet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. La caja, el inventario y los reportes corren en la computadora del negocio. La licencia se valida en la máquina, sin conexión, y los datos viven en una base SQLite local."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo cobrar en dólares?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Kuanto maneja precios y ventas en CUP y USD con la tasa de cambio que configura el local, y guarda historial de cada cambio de precio."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿En qué plataformas funciona?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En macOS y Windows como instalador de escritorio, y en Android como APK."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo se sincronizan los equipos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Por jornadas, con un pendrive cifrado AES-256. No hay sincronización en tiempo real porque no depende de internet."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
