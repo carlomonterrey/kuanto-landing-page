@@ -4,7 +4,7 @@
  * cuando cambien logo o marca, y commitea los PNG resultantes.
  */
 import { chromium } from 'playwright';
-import { readFile, mkdir, writeFile } from 'node:fs/promises';
+import { readFile, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -86,6 +86,5 @@ const og = `<!doctype html><html><head><style>
 
 await shot(og, 1200, 630, 'og/kuanto-og.png');
 
-await writeFile(join(out, 'og', '.gitkeep'), '');
 await browser.close();
 console.log('Listo');

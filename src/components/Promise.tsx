@@ -34,6 +34,15 @@ export function Promise() {
 
   return (
     <section className="promise" ref={ref} aria-label="El compromiso de Kuanto">
+      <svg className="promise__k" viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="currentColor" strokeWidth={16} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M184 400 L184 112" />
+          <path d="M184 256 L352 112" />
+          <path d="M184 256 L344 400" />
+        </g>
+        <circle cx="184" cy="256" r="26" fill="var(--ember)" />
+      </svg>
+
       <div className="wrap promise__inner">
         <span className="promise__rule" aria-hidden="true" />
 
