@@ -51,7 +51,9 @@ no hace falta fallback de SPA.
 - `Cache-Control: immutable` a `/assets/*`.
 - `max-age=0, must-revalidate` a `index.html`.
 - `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`,
-  `Permissions-Policy` y una CSP que solo permite recursos propios.
+  `Permissions-Policy` y una CSP que solo permite recursos propios y el beacon de
+  Cloudflare Web Analytics (`static.cloudflareinsights.com` y
+  `cloudflareinsights.com`).
 
 En Vercel u otro host, replica esas cabeceras en su configuración.
 
@@ -239,5 +241,6 @@ export const WHATSAPP_MESSAGES = {
 - Las capturas muestran datos de prueba; conviene reemplazarlas por un catálogo
   real.
 - El CTA abre WhatsApp; todavía no existe enlace de descarga.
-- No hay analítica instalada. Si se añade, respeta la CSP de `_headers` y la
-  privacidad.
+- Analítica: Cloudflare Web Analytics (sin cookies) instalada en `index.html`
+  con el token del proyecto. Si se cambia de herramienta, actualiza la CSP de
+  `_headers` y el aviso de privacidad.
