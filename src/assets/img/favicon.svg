@@ -1,6 +1,6 @@
-<svg viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Kuanto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Kuanto">
   <rect width="64" height="64" rx="9" fill="#070607"/>
-  <g fill="none" stroke="#f7f6f2" stroke-width="6.3" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="#f7f6f2" stroke-width="7.2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M22.3 11.5 L22.3 52.5" />
     <path d="M43.5 11.5 L22.3 32 L43.5 52.5" />
   </g>
