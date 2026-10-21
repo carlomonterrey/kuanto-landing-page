@@ -20,6 +20,7 @@ export function Nav() {
         <a
           className="btn btn--primary btn--sm"
           href={whatsappLink(WHATSAPP_MESSAGES.install)}
+          data-cta="nav"
           target="_blank"
           rel="noopener noreferrer"
         >

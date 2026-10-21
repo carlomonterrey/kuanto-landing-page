@@ -27,6 +27,9 @@ export function Footer() {
 
       <div className="wrap footer__base">
         <p>{footer.copyright}</p>
+        <p className="footer__note">
+          Analítica: Cloudflare sin cookies y Clarity con grabaciones de sesión.
+        </p>
       </div>
     </footer>
   );

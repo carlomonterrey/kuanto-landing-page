@@ -241,6 +241,8 @@ export const WHATSAPP_MESSAGES = {
 - Las capturas muestran datos de prueba; conviene reemplazarlas por un catálogo
   real.
 - El CTA abre WhatsApp; todavía no existe enlace de descarga.
-- Analítica: Cloudflare Web Analytics (sin cookies) instalada en `index.html`
-  con el token del proyecto. Si se cambia de herramienta, actualiza la CSP de
-  `_headers` y el aviso de privacidad.
+- Analítica: Cloudflare Web Analytics (sin cookies) y Microsoft Clarity
+  (proyecto `z14w8z7yas`) instalados en `index.html`. Los CTA de WhatsApp emiten
+  `whatsapp_nav`, `whatsapp_hero`, `whatsapp_cta`, `whatsapp_soporte` y
+  `whatsapp_mobile` desde `src/lib/tracking.ts`. Si se cambia de herramienta,
+  actualiza la CSP de `_headers` y el aviso de privacidad del footer.

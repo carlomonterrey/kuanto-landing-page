@@ -12,6 +12,7 @@ export function Cta() {
           <a
             className="btn btn--dark"
             href={cta.primary.href}
+            data-cta="cta"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -21,6 +22,7 @@ export function Cta() {
           <a
             className="btn btn--outline-dark"
             href={cta.secondary.href}
+            data-cta="soporte"
             target="_blank"
             rel="noopener noreferrer"
           >

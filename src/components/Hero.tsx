@@ -44,6 +44,7 @@ export function Hero() {
             <a
               className="btn btn--primary"
               href={hero.primaryCta.href}
+              data-cta="hero"
               target="_blank"
               rel="noopener noreferrer"
             >

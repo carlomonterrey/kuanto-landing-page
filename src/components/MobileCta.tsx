@@ -23,6 +23,7 @@ export function MobileCta() {
       <a
         className="btn btn--primary"
         href={whatsappLink(WHATSAPP_MESSAGES.install)}
+        data-cta="mobile"
         target="_blank"
         rel="noopener noreferrer"
       >
