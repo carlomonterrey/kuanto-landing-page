@@ -47,9 +47,9 @@ export type DownloadItem = {
    -------------------------------------------------------------------------- */
 export const downloads = {
   version: '1.1.13',
-  title: 'Kuanto en tu equipo, listo para cobrar.',
+  title: 'Kuanto en tu computadora, listo para cobrar.',
   lead:
-    'Elegí tu sistema. La prueba de 30 días empieza al abrir la app: sin tarjeta, sin cuenta y sin internet.',
+    'Elige tu sistema. La prueba de 30 días empieza al abrir la aplicación: sin tarjeta, sin cuenta y sin internet.',
   items: [
     {
       id: 'windows',
@@ -91,7 +91,7 @@ export const navLinks: NavLink[] = [
 export const hero = {
   titleLines: ['Sin internet,', 'el negocio', 'sigue.'],
   cardText:
-    'Kuanto es el punto de venta y el almacén para pequeños y medianos negocios en Cuba. Corre en tu computadora, guarda los datos en el equipo y te deja cobrar en CUP y USD aunque no haya red.',
+    'Kuanto es el punto de venta y el almacén para pequeños y medianos negocios en Cuba. Corre en tu computadora, guarda los datos ahí mismo y te deja cobrar en CUP y USD aunque no haya red.',
   primaryCta: { label: 'Descargar Kuanto', href: '#descargas' },
   secondaryCta: { label: 'Ver cómo funciona', href: '#como-funciona' },
   chips: {
@@ -109,7 +109,7 @@ export const hero = {
   facts: [
     'Descarga inmediata',
     '30 días gratis',
-    'Datos en tu equipo',
+    'Datos en tu computadora',
     'CUP y USD con tasa propia',
   ],
   platformNote: 'macOS · Windows · Android',
@@ -178,7 +178,7 @@ export const dollar = {
     rateLabel: 'Tasa del local (CUP por USD)',
     priceLabel: 'Precio del producto (USD)',
     resultLabel: 'Equivalente en CUP',
-    note: 'Ejemplo ilustrativo. La tasa real se configura dentro de la app y queda guardada en el equipo.',
+    note: 'Ejemplo ilustrativo. La tasa real se configura dentro de la aplicación y queda guardada en la computadora.',
   },
 };
 
@@ -213,11 +213,11 @@ export const limits = {
   items: [
     {
       title: 'No sincroniza en tiempo real',
-      text: 'Los equipos se actualizan por jornadas: se pasan los datos con un pendrive cifrado AES-256.',
+      text: 'Las computadoras se actualizan por jornadas: se pasan los datos con una memoria USB cifrada AES-256.',
     },
     {
       title: 'No es una nube',
-      text: 'No hay acceso remoto ni panel desde el teléfono. Los datos se quedan en el equipo del negocio.',
+      text: 'No hay acceso remoto ni panel desde el teléfono. Los datos se quedan en la computadora del negocio.',
     },
     {
       title: 'No reemplaza internet',
@@ -232,19 +232,19 @@ export const faq = {
   items: [
     {
       q: '¿Kuanto funciona sin internet?',
-      a: 'Sí. La caja, el inventario y los reportes corren en la computadora del negocio. La licencia se valida en la máquina, sin conexión, y los datos viven en una base SQLite local.',
+      a: 'Sí. La caja, el inventario y los reportes corren en la computadora del negocio. La licencia se valida en la computadora, sin conexión, y los datos viven en una base SQLite local.',
     },
     {
       q: '¿Puedo cobrar en dólares?',
-      a: 'Sí. Kuanto maneja precios y ventas en CUP y USD con la tasa de cambio que configura el local, y guarda historial de cada cambio de precio.',
+      a: 'Sí. Kuanto maneja precios y ventas en CUP y USD con la tasa del dólar que configura el local, y guarda historial de cada cambio de precio.',
     },
     {
       q: '¿En qué plataformas funciona?',
       a: 'En macOS y Windows como instalador de escritorio, y en Android como APK.',
     },
     {
-      q: '¿Cómo se sincronizan los equipos?',
-      a: 'Por jornadas, con un pendrive cifrado AES-256. No hay sincronización en tiempo real porque no depende de internet.',
+      q: '¿Cómo se sincronizan las computadoras?',
+      a: 'Por jornadas, con una memoria USB cifrada AES-256. No hay sincronización en tiempo real porque no depende de internet.',
     },
   ],
 };
@@ -252,7 +252,7 @@ export const faq = {
 export const gallery = {
   title: ['Así se ve', 'por dentro.'],
   lead:
-    'Capturas reales de la app (versión 1.1.10). Muestran datos de prueba del entorno local, no información de ningún negocio.',
+    'Capturas reales de la aplicación. Muestran datos de prueba del entorno local, no información de ningún negocio.',
   note: 'Toca una captura para verla completa.',
   items: [] as GalleryShot[],
 };
@@ -260,7 +260,7 @@ export const gallery = {
 export const capabilities = {
   title: ['Todo lo que', 'hace falta.'],
   lead:
-    'La operación completa del local en una sola app: vender, almacenar y administrar sin que nada dependa de la red.',
+    'La operación completa del local en una sola aplicación: vender, almacenar y administrar sin que nada dependa de la red.',
   groups: [
     {
       title: 'Vender',
@@ -285,8 +285,8 @@ export const capabilities = {
       items: [
         { title: 'Reportes de utilidad', text: 'Ingreso, costo y margen por producto en un rango.' },
         { title: 'Liquidaciones', text: 'Pagos recibidos y entregados, en efectivo o productos.' },
-        { title: 'Roles por máquina', text: 'ADMIN, ALMACÉN o POS: cada equipo con su alcance.' },
-        { title: 'Licencia offline', text: 'Archivo .key firmado por máquina, sin validar en red.' },
+        { title: 'Roles por computadora', text: 'ADMIN, ALMACÉN o POS: cada computadora con su alcance.' },
+        { title: 'Licencia offline', text: 'Archivo .key firmado por computadora, sin validar en red.' },
       ],
     },
   ] as CapabilityGroup[],
@@ -296,16 +296,16 @@ export const steps = {
   title: ['Tres pasos', 'y a facturar.'],
   items: [
     {
-      title: 'Instala el nodo',
+      title: 'Configura la computadora',
       text: 'Instalador para macOS y Windows, o APK para Android. No hay servidor que montar ni puerto que abrir.',
     },
     {
       title: 'Activa la licencia',
-      text: 'Un archivo .key ligado a la máquina. Se valida en el primer arranque, sin internet.',
+      text: 'Un archivo .key ligado a la computadora. Se valida en el primer arranque, sin internet.',
     },
     {
       title: 'Abre el turno',
-      text: 'Defines el fondo, cargas el catálogo y empiezas a facturar. El rol de cada equipo queda fijo.',
+      text: 'Defines el fondo, cargas el catálogo y empiezas a facturar. El rol de cada computadora queda fijo.',
     },
   ] as Step[],
 };
@@ -314,18 +314,18 @@ export const trust = {
   title: ['Confianza', 'que se verifica.'],
   lead: 'No hace falta creer en una promesa de marketing: así está construido el sistema.',
   items: [
-    { value: 'AES-256', text: 'Cifrado del pendrive con el que se sincronizan los equipos.' },
-    { value: 'ECDSA P-256', text: 'Firma de la licencia por máquina, validada sin red.' },
-    { value: 'SQLite local', text: 'Los datos del negocio viven en el equipo del local.' },
+    { value: 'AES-256', text: 'Cifrado de la memoria USB con la que se sincronizan las computadoras.' },
+    { value: 'ECDSA P-256', text: 'Firma de la licencia por computadora, validada sin red.' },
+    { value: 'SQLite local', text: 'Los datos del negocio viven en la computadora del local.' },
     { value: 'Sin servidor', text: 'Ni la caja ni el arranque necesitan conexión a internet.' },
   ] as TrustItem[],
   claim: 'Negocios locales ya confían en Kuanto.',
 };
 
 export const cta = {
-  title: 'Empezá hoy. Sin señal, sin vueltas.',
+  title: 'Empieza hoy. Sin señal, sin vueltas.',
   text:
-    'Descargá Kuanto para tu equipo y empezá la prueba de 30 días. Sin tarjeta, sin cuenta y sin internet. Si necesitás ayuda, escribinos por WhatsApp.',
+    'Descarga Kuanto para tu computadora y empieza la prueba de 30 días. Sin tarjeta, sin cuenta y sin internet. Si necesitas ayuda, escribe por WhatsApp.',
   primary: { label: 'Descargar Kuanto', href: '#descargas' },
   secondary: { label: 'Hablar con soporte', href: whatsappLink(WHATSAPP_MESSAGES.support) },
   note: 'Windows · macOS · Android · 30 días gratis',
@@ -355,7 +355,7 @@ export const footer = {
     {
       title: 'Legal',
       links: [
-        { label: 'Licencia por máquina', href: '#contacto' },
+        { label: 'Licencia por computadora', href: '#contacto' },
         { label: 'Privacidad', href: '#contacto' },
       ],
     },
