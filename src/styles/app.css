@@ -1793,7 +1793,7 @@ section[id] {
    -------------------------------------------------------------------------- */
 
 .downloads {
-  padding: var(--section) 0;
+  padding: 0 0 var(--section);
   border-top: 1.5px dotted var(--line);
   background:
     radial-gradient(1200px 500px at 85% -10%, rgba(82, 74, 233, 0.08), transparent 70%),
@@ -1825,6 +1825,68 @@ section[id] {
   height: 9px;
   border-radius: 50%;
   background: var(--ember);
+}
+
+/* Oferta de lanzamiento: banda Ember dentro de Descargas. */
+.downloads__promo {
+  padding: clamp(48px, 6vw, 84px) 0;
+  background: var(--ember);
+  color: var(--obsidian);
+}
+
+.downloads__promo-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: end;
+}
+
+.downloads__promo-kicker {
+  margin: 0 0 18px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #2b0d02;
+}
+
+.downloads .downloads__promo-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 7.6vw, 7.2rem);
+  line-height: 0.84;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+}
+
+.downloads__promo-title span {
+  display: block;
+}
+
+.downloads__promo-title .is-accent {
+  display: inline-block;
+  padding: 0 0.07em 0.02em;
+  background: var(--sulfur);
+}
+
+.downloads__promo-aside {
+  display: grid;
+  gap: 22px;
+  justify-items: start;
+  padding-bottom: 4px;
+}
+
+.downloads__promo-aside p {
+  margin: 0;
+  max-width: 38ch;
+  font-size: 17px;
+  line-height: 1.55;
+  font-weight: 500;
+  color: #2b0d02;
+}
+
+.downloads__content {
+  padding-top: clamp(48px, 6vw, 80px);
 }
 
 .downloads h2 {
@@ -1987,6 +2049,15 @@ section[id] {
 }
 
 @media (max-width: 920px) {
+  .downloads__promo-inner {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .downloads__promo-aside {
+    max-width: 44ch;
+  }
+
   .downloads__head {
     grid-template-columns: minmax(0, 1fr);
     align-items: start;
@@ -1994,5 +2065,19 @@ section[id] {
 
   .downloads__grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .downloads__promo {
+    padding: 44px 0;
+  }
+
+  .downloads .downloads__promo-title {
+    font-size: clamp(3rem, 14vw, 5.2rem);
+  }
+
+  .downloads__promo-aside .btn {
+    width: 100%;
   }
 }

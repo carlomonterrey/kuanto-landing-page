@@ -47,9 +47,15 @@ export type DownloadItem = {
    -------------------------------------------------------------------------- */
 export const downloads = {
   version: '1.1.13',
-  title: 'Kuanto en tu computadora, listo para cobrar.',
+  promo: {
+    kicker: '30 días por nuestra cuenta',
+    titleLines: ['Un mes.', 'Gratis.', 'Sin cuentos.'],
+    text: 'Tu primer mes corre por nuestra cuenta. Sin tarjeta, sin cuenta y sin compromiso.',
+    cta: 'Quiero mi mes gratis',
+  },
+  title: 'Elige tu sistema.',
   lead:
-    'Elige tu sistema. La prueba de 30 días empieza al abrir la aplicación: sin tarjeta, sin cuenta y sin internet.',
+    'La prueba se activa al abrir la aplicación: sin tarjeta, sin cuenta y sin compromiso.',
   items: [
     {
       id: 'windows',
@@ -108,7 +114,8 @@ export const hero = {
   },
   facts: [
     'Descarga inmediata',
-    '30 días gratis',
+    'Un mes gratis',
+    'Sin tarjeta ni cuenta',
     'Datos en tu computadora',
     'CUP y USD con tasa propia',
   ],
@@ -323,12 +330,12 @@ export const trust = {
 };
 
 export const cta = {
-  title: 'Empieza hoy. Sin señal, sin vueltas.',
+  title: 'Empieza tu mes gratis. Sin señal, sin vueltas.',
   text:
-    'Descarga Kuanto para tu computadora y empieza la prueba de 30 días. Sin tarjeta, sin cuenta y sin internet. Si necesitas ayuda, escribe por WhatsApp.',
-  primary: { label: 'Descargar Kuanto', href: '#descargas' },
+    'Tu primer mes corre por nuestra cuenta. Descarga Kuanto para tu computadora y prueba todo durante 30 días. Sin tarjeta, sin cuenta y sin compromiso.',
+  primary: { label: 'Quiero mi mes gratis', href: '#descargas' },
   secondary: { label: 'Hablar con soporte', href: whatsappLink(WHATSAPP_MESSAGES.support) },
-  note: 'Windows · macOS · Android · 30 días gratis',
+  note: 'Windows · macOS · Android · Un mes gratis',
 };
 
 export const footer = {

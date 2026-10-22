@@ -54,7 +54,33 @@ export function Downloads() {
 
   return (
     <section className="downloads" id="descargas">
-      <div className="wrap">
+      <div className="downloads__promo">
+        <div className="wrap downloads__promo-inner">
+          <div>
+            <p className="downloads__promo-kicker">{downloads.promo.kicker}</p>
+            <h2 className="downloads__promo-title">
+              {downloads.promo.titleLines.map((line, index) => (
+                <span key={line} className={index === 1 ? 'is-accent' : undefined}>
+                  {line}
+                </span>
+              ))}
+            </h2>
+          </div>
+          <div className="downloads__promo-aside">
+            <p>{downloads.promo.text}</p>
+            <a
+              className="btn btn--dark"
+              href={actual?.url ?? '#descargas-lista'}
+              onClick={actual ? () => trackDownload(actual.id) : undefined}
+            >
+              {downloads.promo.cta}
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="wrap downloads__content" id="descargas-lista">
         <div className="downloads__head">
           <div className="downloads__title">
             <p className="downloads__kicker">Descargas</p>
@@ -116,7 +142,7 @@ export function Downloads() {
 
         <div className="downloads__meta">
           <span>Versión {downloads.version}</span>
-          <span>30 días gratis · sin tarjeta</span>
+          <span>Un mes gratis · sin tarjeta</span>
 
         </div>
       </div>

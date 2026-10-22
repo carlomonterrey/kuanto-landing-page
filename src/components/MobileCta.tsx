@@ -19,7 +19,7 @@ export function MobileCta() {
   return (
     <div className="mobile-bar">
       <a className="btn btn--primary" href="#descargas" data-cta="mobile-descargar">
-        Descargar Kuanto
+        Empieza gratis
         <span aria-hidden="true">↓</span>
       </a>
     </div>
