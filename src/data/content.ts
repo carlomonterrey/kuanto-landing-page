@@ -46,7 +46,7 @@ export type DownloadItem = {
    Descargas. Cuando publiques una versión nueva, cambia version y las URLs.
    -------------------------------------------------------------------------- */
 export const downloads = {
-  version: '1.1.12',
+  version: '1.1.13',
   title: 'Kuanto en tu equipo, listo para cobrar.',
   lead:
     'Elegí tu sistema. La prueba de 30 días empieza al abrir la app: sin tarjeta, sin cuenta y sin internet.',
@@ -56,21 +56,21 @@ export const downloads = {
       label: 'Windows',
       detail: 'Windows 10/11 · 64 bits',
       kind: 'Instalador .exe',
-      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.12/kuanto-1.1.12-setup.exe',
+      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.13/kuanto-1.1.13-setup.exe',
     },
     {
       id: 'macos',
       label: 'macOS',
       detail: 'macOS 12+ · Apple Silicon',
       kind: 'Imagen .dmg',
-      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.12/kuanto-1.1.12-arm64.dmg',
+      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.13/kuanto-1.1.13-arm64.dmg',
     },
     {
       id: 'android',
       label: 'Android',
       detail: 'Android 8+',
       kind: 'Archivo .apk',
-      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.12/kuanto-1.1.12.apk',
+      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.13/kuanto-1.1.13.apk',
     },
   ] as DownloadItem[],
 } as const;
