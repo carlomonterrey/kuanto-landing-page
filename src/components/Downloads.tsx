@@ -78,7 +78,7 @@ export function Downloads() {
                 <span aria-hidden="true">↓</span>
               </a>
             ) : (
-              <p className="downloads__detect">Elige tu sistema abajo.</p>
+              <p className="downloads__detect">Elige tu sistema abajo</p>
             )}
           </div>
         </div>
