@@ -64,8 +64,8 @@ export const downloads = {
       id: 'macos',
       label: 'macOS',
       detail: 'macOS 12+ · Apple Silicon',
-      kind: 'Archivo .zip',
-      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.11/kuanto-1.1.11-arm64.zip',
+      kind: 'Imagen .dmg',
+      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.11/kuanto-1.1.11-arm64.dmg',
     },
     {
       id: 'android',
