@@ -2,7 +2,6 @@ import halftoneViolet from '../assets/img/halftone-violet.svg';
 import halftoneOrange from '../assets/img/halftone-orange.svg';
 import { hero } from '../data/content';
 import { useParallax } from '../hooks/useParallax';
-import { WhatsAppIcon } from './WhatsAppIcon';
 
 /* La figura del hero: titular, bloque violeta, bloque naranja y tarjeta crema.
    Las posiciones viven en `.hero__*` dentro de app.css. */
@@ -44,12 +43,10 @@ export function Hero() {
             <a
               className="btn btn--primary"
               href={hero.primaryCta.href}
-              data-cta="hero"
-              target="_blank"
-              rel="noopener noreferrer"
+              data-cta="hero-descargar"
             >
-              <WhatsAppIcon />
               {hero.primaryCta.label}
+              <span aria-hidden="true">↓</span>
             </a>
             <a className="btn btn--ghost" href={hero.secondaryCta.href}>
               {hero.secondaryCta.label}

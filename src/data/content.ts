@@ -5,7 +5,7 @@ export type NavLink = { label: string; href: string };
    -------------------------------------------------------------------------- */
 export const WHATSAPP_NUMBER = '5355230827';
 export const WHATSAPP_MESSAGES = {
-  install: 'Hola, quiero solicitar la instalación de Kuanto.',
+  install: 'Hola, quiero descargar Kuanto.',
   support: 'Hola, necesito soporte con Kuanto.',
 };
 export const whatsappLink = (message: string) =>
@@ -32,6 +32,53 @@ export type TrustItem = { value: string; text: string };
 
 export type Platform = { label: string; icon: 'apple' | 'windows' | 'android' };
 
+export type DownloadId = 'windows' | 'macos' | 'android';
+
+export type DownloadItem = {
+  id: DownloadId;
+  label: string;
+  detail: string;
+  kind: string;
+  url: string;
+};
+
+/* --------------------------------------------------------------------------
+   Descargas. Cuando publiques una versión nueva, cambia version y las URLs.
+   -------------------------------------------------------------------------- */
+export const downloads = {
+  version: '1.1.11',
+  releaseUrl:
+    'https://github.com/carlomonterrey/kuanto-downloads/releases/tag/v1.1.11',
+  title: 'Kuanto en tu equipo, listo para cobrar.',
+  lead:
+    'Elegí tu sistema. La prueba de 30 días empieza al abrir la app: sin tarjeta, sin cuenta y sin internet.',
+  items: [
+    {
+      id: 'windows',
+      label: 'Windows',
+      detail: 'Windows 10/11 · 64 bits',
+      kind: 'Instalador .exe',
+      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.11/kuanto-1.1.11-setup.exe',
+    },
+    {
+      id: 'macos',
+      label: 'macOS',
+      detail: 'macOS 12+ · Apple Silicon',
+      kind: 'Archivo .zip',
+      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.11/kuanto-1.1.11-arm64.zip',
+    },
+    {
+      id: 'android',
+      label: 'Android',
+      detail: 'Android 8+',
+      kind: 'Archivo .apk',
+      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.11/kuanto-1.1.11.apk',
+    },
+  ] as DownloadItem[],
+  macIntel:
+    '¿Tenés un Mac con Intel? Escribinos y te pasamos el instalador x64.',
+} as const;
+
 /* --------------------------------------------------------------------------
    Todo el copy vive aquí para que puedas editarlo sin tocar los componentes.
    -------------------------------------------------------------------------- */
@@ -42,13 +89,14 @@ export const navLinks: NavLink[] = [
   { label: 'Para quién', href: '#para-quien' },
   { label: 'Galería', href: '#galeria' },
   { label: 'Funciones', href: '#funcionalidades' },
+  { label: 'Descargas', href: '#descargas' },
 ];
 
 export const hero = {
   titleLines: ['Sin internet,', 'el negocio', 'sigue.'],
   cardText:
     'Kuanto es el punto de venta y el almacén para pequeños y medianos negocios en Cuba. Corre en tu computadora, guarda los datos en el equipo y te deja cobrar en CUP y USD aunque no haya red.',
-  primaryCta: { label: 'Solicitar instalación', href: whatsappLink(WHATSAPP_MESSAGES.install) },
+  primaryCta: { label: 'Descargar Kuanto', href: '#descargas' },
   secondaryCta: { label: 'Ver cómo funciona', href: '#como-funciona' },
   chips: {
     rate: {
@@ -63,10 +111,10 @@ export const hero = {
     },
   },
   facts: [
-    'Instalación el mismo día',
+    'Descarga inmediata',
+    '30 días gratis',
     'Datos en tu equipo',
     'CUP y USD con tasa propia',
-    'Soporte por WhatsApp',
   ],
   platformNote: 'macOS · Windows · Android',
 };
@@ -279,12 +327,12 @@ export const trust = {
 };
 
 export const cta = {
-  title: 'Deja de apostar el turno a la señal.',
+  title: 'Empezá hoy. Sin señal, sin vueltas.',
   text:
-    'Escríbenos por WhatsApp y te enviamos el instalador y el archivo de licencia. El mismo día, el local puede estar facturando.',
-  primary: { label: 'Solicitar instalación', href: whatsappLink(WHATSAPP_MESSAGES.install) },
+    'Descargá Kuanto para tu equipo y empezá la prueba de 30 días. Sin tarjeta, sin cuenta y sin internet. Si necesitás ayuda, escribinos por WhatsApp.',
+  primary: { label: 'Descargar Kuanto', href: '#descargas' },
   secondary: { label: 'Hablar con soporte', href: whatsappLink(WHATSAPP_MESSAGES.support) },
-  note: 'macOS · Windows · Android',
+  note: 'Windows · macOS · Android · 30 días gratis',
 };
 
 export const footer = {
@@ -297,6 +345,7 @@ export const footer = {
         { label: 'El dólar', href: '#dolar' },
         { label: 'Funciones', href: '#funcionalidades' },
         { label: 'Galería', href: '#galeria' },
+        { label: 'Descargas', href: '#descargas' },
       ],
     },
     {

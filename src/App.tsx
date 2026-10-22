@@ -2,6 +2,7 @@ import { Audience } from './components/Audience';
 import { Capabilities } from './components/Capabilities';
 import { Cta } from './components/Cta';
 import { Dollar } from './components/Dollar';
+import { Downloads } from './components/Downloads';
 import { Faq } from './components/Faq';
 import { Footer } from './components/Footer';
 import { Gallery } from './components/Gallery';
@@ -24,6 +25,7 @@ export default function App() {
       <Nav />
       <main id="contenido">
         <Hero />
+        <Downloads />
         <Problem />
         <Promise />
         <Dollar />

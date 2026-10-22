@@ -1,5 +1,5 @@
 import logo from '../assets/img/logo.svg';
-import { navLinks, whatsappLink, WHATSAPP_MESSAGES } from '../data/content';
+import { navLinks } from '../data/content';
 
 export function Nav() {
   return (
@@ -17,14 +17,8 @@ export function Nav() {
             </a>
           ))}
         </div>
-        <a
-          className="btn btn--primary btn--sm"
-          href={whatsappLink(WHATSAPP_MESSAGES.install)}
-          data-cta="nav"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Solicitar instalación
+        <a className="btn btn--primary btn--sm" href="#descargas" data-cta="nav-descargar">
+          Descargar
         </a>
       </nav>
     </header>

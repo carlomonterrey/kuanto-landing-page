@@ -9,15 +9,9 @@ export function Cta() {
         <Reveal as="h2">{cta.title}</Reveal>
         <Reveal as="p">{cta.text}</Reveal>
         <Reveal className="actions actions--center">
-          <a
-            className="btn btn--dark"
-            href={cta.primary.href}
-            data-cta="cta"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <WhatsAppIcon />
+          <a className="btn btn--dark" href={cta.primary.href} data-cta="cta-descargar">
             {cta.primary.label}
+            <span aria-hidden="true">↓</span>
           </a>
           <a
             className="btn btn--outline-dark"
@@ -26,6 +20,7 @@ export function Cta() {
             target="_blank"
             rel="noopener noreferrer"
           >
+            <WhatsAppIcon />
             {cta.secondary.label}
           </a>
         </Reveal>

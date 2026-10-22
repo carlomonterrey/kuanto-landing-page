@@ -17,6 +17,12 @@ export function initTracking(): void {
       const target = event.target;
       if (!(target instanceof Element)) return;
 
+      const download = target.closest<HTMLAnchorElement>('a[data-download]');
+      if (download) {
+        window.clarity?.('event', `download_${download.dataset.download ?? 'otro'}`);
+        return;
+      }
+
       const link = target.closest<HTMLAnchorElement>('a[href*="wa.me"]');
       if (!link) return;
 
