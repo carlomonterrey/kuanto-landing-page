@@ -45,14 +45,14 @@ export type DownloadItem = {
 /* --------------------------------------------------------------------------
    Descargas. Cuando publiques una versión nueva, cambia version y las URLs.
    -------------------------------------------------------------------------- */
+export const offer = {
+  title: 'Un mes. Gratis. Sin cuentos.',
+  note: 'Sin tarjeta ni cuenta',
+  cta: 'Quiero mi mes gratis',
+} as const;
+
 export const downloads = {
   version: '1.1.13',
-  promo: {
-    kicker: '30 días por nuestra cuenta',
-    titleLines: ['Un mes.', 'Gratis.', 'Sin cuentos.'],
-    text: 'Tu primer mes corre por nuestra cuenta. Sin tarjeta, sin cuenta y sin compromiso.',
-    cta: 'Quiero mi mes gratis',
-  },
   title: 'Elige tu sistema.',
   lead:
     'La prueba se activa al abrir la aplicación: sin tarjeta, sin cuenta y sin compromiso.',

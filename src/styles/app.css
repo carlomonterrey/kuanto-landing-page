@@ -297,6 +297,90 @@ section[id] {
   margin-left: auto;
 }
 
+
+/* --------------------------------------------------------------------------
+   Oferta compacta bajo el header
+   -------------------------------------------------------------------------- */
+
+.offer-strip {
+  background: var(--obsidian);
+  color: var(--chalk);
+}
+
+.offer-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 58px;
+  padding-block: 10px;
+}
+
+.offer-strip__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.1vw, 1.65rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.offer-strip__accent {
+  display: inline-block;
+  padding: 0 0.08em;
+  background: var(--sulfur);
+  color: var(--obsidian);
+}
+
+.offer-strip__note {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+}
+
+.offer-strip__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: var(--r-pill);
+  background: var(--sulfur);
+  color: var(--obsidian);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.offer-strip__cta:hover {
+  background: var(--chalk);
+}
+
+@media (max-width: 760px) {
+  .offer-strip__inner {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    min-height: 0;
+    padding-block: 9px;
+  }
+
+  .offer-strip__title {
+    flex: 1 1 auto;
+    font-size: clamp(1rem, 4.6vw, 1.25rem);
+  }
+
+  .offer-strip__note {
+    display: none;
+  }
+
+  .offer-strip__cta {
+    padding: 7px 11px;
+    font-size: 11px;
+  }
+}
+
 /* --------------------------------------------------------------------------
    Hero
    -------------------------------------------------------------------------- */
@@ -1854,74 +1938,6 @@ section[id] {
   background: var(--ember);
 }
 
-/* Oferta de lanzamiento: banda Ember dentro de Descargas. */
-.downloads__promo {
-  padding: clamp(48px, 6vw, 84px) 0;
-  background: var(--obsidian);
-  color: var(--chalk);
-}
-
-.downloads__promo-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
-  gap: clamp(28px, 5vw, 72px);
-  align-items: end;
-}
-
-.downloads__promo-kicker {
-  margin: 0 0 18px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--sulfur);
-}
-
-.downloads .downloads__promo-title {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(3.2rem, 7.6vw, 7.2rem);
-  line-height: 0.84;
-  letter-spacing: 0.005em;
-  text-transform: uppercase;
-}
-
-.downloads__promo-title span {
-  display: block;
-}
-
-.downloads__promo-title .is-accent {
-  display: inline-block;
-  padding: 0 0.07em 0.02em;
-  background: var(--sulfur);
-  color: var(--obsidian);
-}
-
-.downloads__promo-aside {
-  display: grid;
-  gap: 22px;
-  justify-items: start;
-  padding-bottom: 4px;
-}
-
-.downloads__promo-aside p {
-  margin: 0;
-  max-width: 38ch;
-  font-size: 17px;
-  line-height: 1.55;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.82);
-}
-
-.downloads__promo .btn--dark {
-  background: var(--sulfur);
-  color: var(--obsidian);
-}
-
-.downloads__promo .btn--dark:hover {
-  background: var(--chalk);
-}
-
 .downloads__content {
   padding-top: clamp(48px, 6vw, 80px);
 }
@@ -2086,15 +2102,6 @@ section[id] {
 }
 
 @media (max-width: 920px) {
-  .downloads__promo-inner {
-    grid-template-columns: minmax(0, 1fr);
-    align-items: start;
-  }
-
-  .downloads__promo-aside {
-    max-width: 44ch;
-  }
-
   .downloads__head {
     grid-template-columns: minmax(0, 1fr);
     align-items: start;
@@ -2102,19 +2109,5 @@ section[id] {
 
   .downloads__grid {
     grid-template-columns: minmax(0, 1fr);
-  }
-}
-
-@media (max-width: 620px) {
-  .downloads__promo {
-    padding: 44px 0;
-  }
-
-  .downloads .downloads__promo-title {
-    font-size: clamp(3rem, 14vw, 5.2rem);
-  }
-
-  .downloads__promo-aside .btn {
-    width: 100%;
   }
 }
