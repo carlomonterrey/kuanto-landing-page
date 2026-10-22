@@ -59,8 +59,11 @@ En Vercel u otro host, replica esas cabeceras en su configuración.
 
 ### Cloudflare Pages con integración continua
 
-El repo ya está preparado (`wrangler.toml`, `.node-version`, `_headers`). Solo
-falta conectar el repositorio desde el panel de Cloudflare:
+El proyecto de Cloudflare Pages se llama **`kuanto`** (no `kuanto-landing-page`) y
+ya está conectado a `carlomonterrey/kuanto-landing-page`. La landing vive en
+**https://kuanto.pages.dev**.
+
+Si hay que recrearlo o revisar el build:
 
 1. **Workers & Pages → Create → Pages → Connect to Git**.
 2. Autoriza la Cloudflare GitHub App y elige
@@ -83,10 +86,11 @@ El build incluye typecheck, Vite, SSR y prerender, así que Cloudflare recibe
 `dist/` ya con el HTML estático. `public/_headers` se aplica automáticamente
 (caché de assets, CSP y cabeceras de seguridad).
 
-**Dominio:** en el proyecto → *Custom domains* → añade `kuanto.app` (y
-`www.kuanto.app` redirigiendo al apex). Si el dominio está en Cloudflare, el DNS
-se crea solo; si no, apunta el CNAME al `*.pages.dev` del proyecto y activa el
-proxy.
+**Dominio:** hoy la landing está en `kuanto.pages.dev`. `kuanto.app` sirve otra
+app (la de finanzas), así que para el canonical conviene un subdominio
+(`pos.kuanto.app` o `landing.kuanto.app`) o mover la app antes de apuntar el
+apex. Mientras tanto, el canonical de `index.html` sigue apuntando a
+`kuanto.app`: cámbialo cuando se decida el dominio final.
 
 **CI en GitHub:** `.github/workflows/ci.yml` ejecuta `npm ci` y `npm run build`
 en cada push y pull request. Es un chequeo, no un segundo despliegue: el deploy
@@ -97,7 +101,7 @@ porque duplicaría despliegues.
 
 ```bash
 npm run build
-npx wrangler pages deploy dist --project-name=kuanto-landing-page
+npx wrangler pages deploy dist --project-name=kuanto
 ```
 
 ### Checklist de salida
