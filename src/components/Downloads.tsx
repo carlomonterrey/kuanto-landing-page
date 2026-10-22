@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { downloads, whatsappLink, WHATSAPP_MESSAGES, type DownloadId } from '../data/content';
+import { downloads, type DownloadId } from '../data/content';
 
 type Sistema = DownloadId | 'otro';
 
@@ -114,25 +114,7 @@ export function Downloads() {
         <div className="downloads__meta">
           <span>Versión {downloads.version}</span>
           <span>30 días gratis · sin tarjeta</span>
-          <a
-            href={downloads.releaseUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ver todas las versiones
-          </a>
-          <span>
-            ¿Mac con Intel?{' '}
-            <a
-              href={whatsappLink(WHATSAPP_MESSAGES.support)}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-cta="descargas-mac-intel"
-            >
-              Escribinos
-            </a>{' '}
-            y te pasamos el instalador x64.
-          </span>
+
         </div>
       </div>
     </section>
