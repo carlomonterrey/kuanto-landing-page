@@ -1795,6 +1795,7 @@ section[id] {
 .downloads {
   padding: 0 0 var(--section);
   border-top: 1.5px dotted var(--line);
+  scroll-margin-top: 92px;
   background:
     radial-gradient(1200px 500px at 85% -10%, rgba(82, 74, 233, 0.08), transparent 70%),
     var(--limestone);
@@ -1830,8 +1831,8 @@ section[id] {
 /* Oferta de lanzamiento: banda Ember dentro de Descargas. */
 .downloads__promo {
   padding: clamp(48px, 6vw, 84px) 0;
-  background: var(--ember);
-  color: var(--obsidian);
+  background: var(--obsidian);
+  color: var(--chalk);
 }
 
 .downloads__promo-inner {
@@ -1847,7 +1848,7 @@ section[id] {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #2b0d02;
+  color: var(--sulfur);
 }
 
 .downloads .downloads__promo-title {
@@ -1867,6 +1868,7 @@ section[id] {
   display: inline-block;
   padding: 0 0.07em 0.02em;
   background: var(--sulfur);
+  color: var(--obsidian);
 }
 
 .downloads__promo-aside {
@@ -1882,7 +1884,16 @@ section[id] {
   font-size: 17px;
   line-height: 1.55;
   font-weight: 500;
-  color: #2b0d02;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.downloads__promo .btn--dark {
+  background: var(--sulfur);
+  color: var(--obsidian);
+}
+
+.downloads__promo .btn--dark:hover {
+  background: var(--chalk);
 }
 
 .downloads__content {
