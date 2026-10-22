@@ -1,7 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Kuanto">
-  <rect width="64" height="64" rx="9" fill="#070607"/>
-  <g fill="none" stroke="#f7f6f2" stroke-width="7.2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M22.3 11.5 L22.3 52.5" />
-    <path d="M43.5 11.5 L22.3 32 L43.5 52.5" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Kuanto">
+  <defs>
+    <linearGradient id="kuanto-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#20123a"/>
+      <stop offset="100%" stop-color="#3d246f"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#kuanto-bg)"/>
+  <g fill="none" stroke="#ffffff" stroke-width="56" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M180 392 L180 120"/>
+    <path d="M180 256 L340 120"/>
+    <path d="M180 256 L340 392"/>
   </g>
+  <circle cx="296" cy="332" r="24" fill="#ffffff"/>
 </svg>

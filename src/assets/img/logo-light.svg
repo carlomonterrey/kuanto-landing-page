@@ -1,7 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Kuanto">
-  <rect width="512" height="512" rx="72" fill="#f7f6f2"/>
-  <g fill="none" stroke="#070607" stroke-width="50" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M178 92 L178 420"/>
-    <path d="M348 92 L178 256 L348 420"/>
+  <rect width="512" height="512" rx="112" fill="#f7f6f4"/>
+  <g fill="none" stroke="#20123a" stroke-width="56" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M180 392 L180 120"/>
+    <path d="M180 256 L340 120"/>
+    <path d="M180 256 L340 392"/>
   </g>
+  <circle cx="296" cy="332" r="24" fill="#20123a"/>
 </svg>

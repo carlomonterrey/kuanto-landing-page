@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { downloads, type DownloadId } from '../data/content';
+import { trackDownload } from '../lib/track-download';
 
 type Sistema = DownloadId | 'otro';
 
@@ -66,6 +67,7 @@ export function Downloads() {
                 className="btn btn--primary"
                 href={actual.url}
                 data-download={actual.id}
+                onClick={() => trackDownload(actual.id)}
               >
                 Descargar para {actual.label}
                 <span aria-hidden="true">↓</span>
@@ -102,6 +104,7 @@ export function Downloads() {
                   className={`btn ${esActual ? 'btn--primary' : 'btn--ghost'}`}
                   href={item.url}
                   data-download={item.id}
+                  onClick={() => trackDownload(item.id)}
                 >
                   Descargar
                   <span aria-hidden="true">↓</span>
