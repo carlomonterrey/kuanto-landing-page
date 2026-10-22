@@ -23,9 +23,9 @@ export default function App() {
         Saltar al contenido
       </a>
       <Nav />
-      <OfferStrip />
       <main id="contenido">
         <Hero />
+        <OfferStrip />
         <Problem />
         <Promise />
         <Dollar />

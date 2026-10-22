@@ -46,7 +46,9 @@ export type DownloadItem = {
    Descargas. Cuando publiques una versión nueva, cambia version y las URLs.
    -------------------------------------------------------------------------- */
 export const offer = {
-  title: 'Un mes. Gratis. Sin cuentos.',
+  before: 'Un mes.',
+  accent: 'Gratis.',
+  after: 'Sin cuentos.',
   note: 'Sin tarjeta ni cuenta',
   cta: 'Quiero mi mes gratis',
 } as const;
