@@ -462,6 +462,32 @@ section[id] {
   line-height: 1.5;
   color: var(--ink-soft);
 }
+
+.hero__offer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+
+.hero__offer-badge {
+  padding: 5px 9px;
+  border-radius: var(--r-pill);
+  background: var(--sulfur);
+  color: var(--obsidian);
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.hero__offer > span {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+}
 .hero__platform {
   font-size: 12px;
   font-weight: 700;
@@ -1794,7 +1820,7 @@ section[id] {
 
 .downloads {
   padding: 0 0 var(--section);
-  border-top: 1.5px dotted var(--line);
+  border-top: 1.5px dotted var(--line-light);
   scroll-margin-top: 92px;
   background:
     radial-gradient(1200px 500px at 85% -10%, rgba(82, 74, 233, 0.08), transparent 70%),

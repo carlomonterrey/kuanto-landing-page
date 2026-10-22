@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
-import { downloads, type DownloadId } from '../data/content';
+import {
+  downloads,
+  type DownloadId,
+  WHATSAPP_MESSAGES,
+  whatsappLink,
+} from '../data/content';
 import { trackDownload } from '../lib/track-download';
 
 type Sistema = DownloadId | 'otro';
@@ -143,7 +148,16 @@ export function Downloads() {
         <div className="downloads__meta">
           <span>Versión {downloads.version}</span>
           <span>Un mes gratis · sin tarjeta</span>
-
+          <span id="contacto">
+            ¿Dudas?{' '}
+            <a
+              href={whatsappLink(WHATSAPP_MESSAGES.support)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Habla con soporte
+            </a>
+          </span>
         </div>
       </div>
     </section>

@@ -98,6 +98,7 @@ export const hero = {
   titleLines: ['Sin internet,', 'el negocio', 'sigue.'],
   cardText:
     'Kuanto es el punto de venta y el almacén para pequeños y medianos negocios en Cuba. Corre en tu computadora, guarda los datos ahí mismo y te deja cobrar en CUP y USD aunque no haya red.',
+  offer: { badge: 'Un mes gratis', text: 'Sin tarjeta ni cuenta' },
   primaryCta: { label: 'Descargar Kuanto', href: '#descargas' },
   secondaryCta: { label: 'Ver cómo funciona', href: '#como-funciona' },
   chips: {

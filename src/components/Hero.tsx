@@ -38,6 +38,10 @@ export function Hero() {
         </div>
 
         <div className="hero__card">
+          <p className="hero__offer">
+            <strong className="hero__offer-badge">{hero.offer.badge}</strong>
+            <span>{hero.offer.text}</span>
+          </p>
           <p>{hero.cardText}</p>
           <div className="actions">
             <a

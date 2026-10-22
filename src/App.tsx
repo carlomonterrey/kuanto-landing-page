@@ -1,6 +1,5 @@
 import { Audience } from './components/Audience';
 import { Capabilities } from './components/Capabilities';
-import { Cta } from './components/Cta';
 import { Dollar } from './components/Dollar';
 import { Downloads } from './components/Downloads';
 import { Faq } from './components/Faq';
@@ -25,7 +24,6 @@ export default function App() {
       <Nav />
       <main id="contenido">
         <Hero />
-        <Downloads />
         <Problem />
         <Promise />
         <Dollar />
@@ -37,7 +35,7 @@ export default function App() {
         <Capabilities />
         <Steps />
         <Trust />
-        <Cta />
+        <Downloads />
       </main>
       <Footer />
       <MobileCta />
