@@ -54,7 +54,7 @@ export const offer = {
 } as const;
 
 export const downloads = {
-  version: '1.1.13',
+  version: '1.1.14',
   title: 'Elige tu sistema',
   lead:
     'La prueba se activa al abrir la aplicación: sin tarjeta, sin cuenta y sin compromiso',
@@ -64,21 +64,21 @@ export const downloads = {
       label: 'Windows',
       detail: 'Windows 10/11 · 64 bits',
       kind: 'Instalador .exe',
-      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.13/kuanto-1.1.13-setup.exe',
+      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.14/kuanto-1.1.14-setup.exe',
     },
     {
       id: 'macos',
       label: 'macOS',
       detail: 'macOS 12+ · Apple Silicon',
       kind: 'Imagen .dmg',
-      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.13/kuanto-1.1.13-arm64.dmg',
+      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.14/kuanto-1.1.14-arm64.dmg',
     },
     {
       id: 'android',
       label: 'Android',
       detail: 'Android 8+',
       kind: 'Archivo .apk',
-      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.13/kuanto-1.1.13.apk',
+      url: 'https://github.com/carlomonterrey/kuanto-downloads/releases/download/v1.1.14/kuanto-1.1.14.apk',
     },
   ] as DownloadItem[],
 } as const;
